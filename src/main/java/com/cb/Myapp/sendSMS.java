@@ -11,8 +11,8 @@ import com.twilio.rest.api.v2010.account.Message;
 import com.twilio.type.PhoneNumber;
 //import com.mysql.cj.protocol.Message;
 public class sendSMS extends HttpServlet {
-	 private static final String ACCOUNT_SID = "ACf8a46b24b229ad5b51295b723167c4c9"; 
-	 private static final String AUTH_TOKEN = "731ce240160df9a7b79fcaa66eb95243"; 
+	 private static final String ACCOUNT_SID = System.getenv("TWILIO_ACCOUNT_SID"); 
+	 private static final String AUTH_TOKEN = System.getenv("TWILIO_AUTH_TOKEN"); 
 	 private static final String TWILIO_PHONE_NUMBER = "+16012283181"; 
 	 private static final String CUSTOMER_PHONE_NUMBER = "+917010242425";
 	 protected void doGet(HttpServletRequest req , HttpServletResponse resp) {
